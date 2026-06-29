@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #1a1a1a;
+  --muted: #555;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --max-width: 780px;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: #f8fafc;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.resume {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.location {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35rem;
+}
+
+.entry {
+  margin-bottom: 1.1rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.entry h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.entry time,
+.tech {
+  font-size: 0.88rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .resume {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  @page {
+    size: A4;
+    margin: 18mm 16mm;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 1.5rem 1rem;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+}
