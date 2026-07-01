@@ -6,10 +6,15 @@ Sơ yếu lý lịch cá nhân của [Trần Phúc Lan](https://github.com/TranP
 
 ```
 tranphuclan-resume/
-├── index.html   # Nội dung CV — chỉnh sửa tại đây
+├── index.html   # Nội dung CV (tiếng Việt mặc định) — chỉnh sửa tại đây
+├── app.js       # Bản dịch tiếng Anh & nút chuyển ngôn ngữ
 ├── style.css    # Giao diện
+├── images/      # Ảnh đại diện
 └── README.md
 ```
+
+> Song ngữ: nội dung tiếng Việt nằm trực tiếp trong `index.html`, bản tiếng Anh
+> tương ứng nằm trong `app.js` (khớp theo thuộc tính `data-i18n`).
 
 ## Sử dụng
 

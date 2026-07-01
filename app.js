@@ -2,63 +2,121 @@
 // Đối tượng dưới đây chứa bản dịch tiếng Anh.
 const translations = {
   en: {
-    role: "BACK END DEVELOPER",
+    role: "BACKEND DEVELOPER",
+
     contact_title: "CONTACT",
-    address: "Hoang Mai, Ha Noi",
+    address: "Ha Noi",
+    dob: "18/03/2000",
+
     skills_title: "SKILLS",
     skill_cat_languages: "Languages",
-    skill_languages: "Node.js (TypeScript), Python",
+    skill_languages: "JavaScript/TypeScript, Python",
+    skill_cat_backend: "Backend",
+    skill_backend: "Node.js, Express, GraphQL (Apollo), REST",
     skill_cat_databases: "Databases",
-    skill_databases: "MongoDB, Redis",
-    skill_cat_api: "API",
-    skill_api: "RESTful, GraphQL, Apollo Server",
-    skill_cat_infra: "Infrastructure",
-    skill_infra: "Docker, Linux",
-    skill_cat_ai: "AI/ML",
-    skill_ai: "RAG pipeline, LLM integration",
-    skill_cat_blockchain: "Blockchain",
-    skill_blockchain: "TRON, TON ecosystem",
-    skill_cat_tools: "Tools",
-    skill_tools: "Git",
-    advantage_title: "ADVANTAGE",
-    adv_1: "5 years of backend experience in the blockchain ecosystem.",
-    adv_2: "RAG/LLM integration experience for product support chatbots.",
-    adv_3: "Redis caching optimization — 50% overall system speed improvement.",
-    adv_4: "DeFi product development on TRON and TON ecosystems.",
-    education_title: "EDUCATION",
-    edu_major: "Information Technology",
-    edu_school: "Ha Noi University of Business and Technology (HUBT)",
+    skill_databases: "MongoDB, PostgreSQL, Redis",
+    skill_cat_queue: "Message Queue",
+    skill_queue: "Kafka, RabbitMQ",
+    skill_cat_devops: "DevOps & Cloud",
+    skill_devops: "Docker, CI/CD, AWS, GCP, Git",
+    skill_cat_concepts: "Concepts",
+    skill_concepts:
+      "REST/GraphQL API design, RAG / LLM integration, caching strategies, API monitoring, Microservices",
+
+    lang_title: "LANGUAGES",
+    lang_vi: "Vietnamese",
+    lang_vi_level: "Native",
+    lang_en: "English",
+    lang_en_level: "Basic",
+
+    summary_title: "SUMMARY",
+    summary_text:
+      "Backend Developer with 4+ years of experience designing and building scalable APIs, real-time systems, and data-intensive applications with Node.js and Python. Experienced in blockchain integrations, AI-powered chatbots, and performance optimization. Strong foundation in database design, message queues, system monitoring, and cloud deployment.",
+
     experience_title: "WORK EXPERIENCE",
-    exp_role: "BACKEND DEVELOPER",
-    exp_1:
-      "Built RESTful and GraphQL APIs using Node.js, Apollo Server, and MongoDB — serving 10K+ daily requests with sub-200ms response times.",
-    exp_2:
-      "Designed and deployed a RAG chatbot with LLM integration (Python, vector DB) — automatically resolving 70%+ of product support queries.",
-    exp_3:
-      "Developed and launched multiple Telegram bot systems (Node.js, TON/TRON APIs) — driving user engagement for 5+ blockchain products.",
-    exp_4:
-      "Implemented a Redis caching layer for MongoDB queries — reducing server load by 40% and improving overall system speed by 50%.",
-    exp_5:
-      "Designed MongoDB schemas and indexing strategies for DeFi products on TRON and TON ecosystems.",
+    exp1_role: "Backend Developer — Silotech",
+    exp1_time: "2022 – Present",
+    exp1_1: "Promoted from Fresher to Junior Backend Developer.",
+    exp1_2:
+      "Built a custom Redis caching layer using Node.js and Redis, reducing database load and improving overall system speed by <strong>50%</strong>.",
+    exp1_3:
+      "Developed and launched multiple production Telegram chatbot systems for blockchain products, using Kafka/RabbitMQ for asynchronous message processing.",
+    exp1_4:
+      "Designed and implemented database schemas for blockchain products using MongoDB and PostgreSQL, ensuring data integrity and scalability.",
+    exp1_5:
+      "Built and maintained AI-powered support chatbots for blockchain products, covering architecture design, data processing, and LLM integration.",
+    exp1_6:
+      "Deployed and maintained backend services using Docker, CI/CD pipelines, and cloud infrastructure (AWS/GCP).",
+
+    exp2_role: "Backend Developer — The Parallel",
+    exp2_time: "2021 – 2022",
+    exp2_1:
+      "Promoted from Backend Intern to Fresher Backend Developer within the first year — recognized for strong technical fundamentals and consistent delivery.",
+    exp2_2:
+      "Developed RESTful and GraphQL APIs with Node.js, Express, Apollo, and MongoDB; owned assigned features end to end from design to deployment.",
+    exp2_3:
+      "Collaborated with frontend developers on API schema design, built reusable modules, and optimized endpoints to improve system reliability and performance.",
+
     projects_title: "PROJECTS",
-    prj_1_name: "Tronsave: Optimizing TRON Transaction Fees",
-    prj_1_role: "Role: Lead Backend Developer",
-    prj_1_stack: "Node.js, TypeScript, TRON API, MongoDB, Redis",
-    prj_1_1:
-      "Processed thousands of Energy & Bandwidth purchase transactions daily, reducing TRON transaction fees for users by up to 30%.",
-    prj_1_2:
-      "Designed an on-chain fee optimization pipeline with Redis caching to reduce TRON network resource lookup latency.",
-    prj_1_3:
-      "Built backend APIs ensuring seamless transactions and a secure passive income mechanism for users.",
-    prj_2_name: "TobBot: Fast DeFi Trading on Telegram for TON",
-    prj_2_role: "Role: Solo Developer",
-    prj_2_stack: "Node.js, TypeScript, TON API, Telegram Bot API, GraphQL",
-    prj_2_1:
-      "Built a Telegram bot enabling DeFi trading on TON with sub-second execution times.",
-    prj_2_2:
-      "Integrated GraphQL API and TON blockchain SDK — eliminating complex steps and reducing operations by 80% vs. traditional web interfaces.",
-    prj_2_3:
-      "Handled high-frequency trades via Telegram with queue and retry mechanisms, ensuring reliability in volatile DeFi environments.",
+
+    prj1_name: "Blockchain Transaction Fee Optimization (TRON)",
+    prj1_meta: "Silotech · under NDA",
+    prj1_1:
+      "Built a service on the <strong>TRON blockchain</strong> that reduces on-chain transaction fees by <strong>~66%</strong> through resource (Energy & Bandwidth) management.",
+    prj1_2:
+      "Enabled seamless resource purchasing and passive-income opportunities for users.",
+    prj1_tech:
+      "<strong>Tech:</strong> Node.js, Express, TronWeb, MongoDB, Redis.",
+
+    prj2_name: "DeFi Trading Bot (Telegram · TON)",
+    prj2_meta: "Silotech · under NDA",
+    prj2_1:
+      "Developed a Telegram bot enabling fast, one-click DeFi trading on the <strong>TON blockchain</strong>, removing complex manual steps for users.",
+    prj2_tech: "<strong>Tech:</strong> Node.js, Telegram Bot API, TON SDK.",
+
+    prj3_name: "AI Support Chatbot for TRON Blockchain",
+    prj3_meta: "Silotech · under NDA",
+    prj3_1:
+      "Designed and built a production AI chatbot on the <strong>TRON blockchain</strong> to answer product usage, transaction/fee (Energy & Bandwidth), and technical support questions.",
+    prj3_2:
+      "Implemented a <strong>RAG-based architecture</strong> with a knowledge base built from internal docs, FAQs, and product documentation; applied prompt engineering to improve response quality.",
+    prj3_3:
+      "Processed and embedded training data using <strong>Ollama</strong>, with a <strong>multi-LLM integration layer</strong> that supports swapping LLM providers without changing core logic.",
+    prj3_4:
+      "Achieved <strong>60–70% response accuracy</strong> against business requirements; released to production and actively maintained.",
+    prj3_tech:
+      "<strong>Tech:</strong> Node.js, Ollama, REST API, RAG, multi-LLM integration.",
+
+    prj4_name: "API Monitoring & Alerting System",
+    prj4_meta: "The Parallel · under NDA",
+    prj4_1:
+      "Built a monitoring system to track <strong>availability and performance</strong>, measuring response times (DNS, TCP, first-byte), uptime, and throughput.",
+    prj4_2:
+      "Implemented <strong>automated alerting and root-cause analysis</strong>, sending real-time alerts via webhooks and messaging platforms to reduce MTTR.",
+    prj4_3:
+      "Developed <strong>traffic management</strong> to monitor traffic volume and detect spikes, preventing system overload.",
+    prj4_tech:
+      "<strong>Tech:</strong> Node.js, Express, Redis, webhooks, messaging integrations.",
+
+    prj5_name: "game-audio-translator",
+    prj5_meta: "Personal Project · 05/2026 – Present",
+    prj5_1:
+      "Built a desktop app that captures in-game audio and translates dialogue from <strong>English to Vietnamese</strong>, helping non-English-speaking players follow game stories without installing third-party translation patches.",
+    prj5_2:
+      "Integrated <strong>OpenAI Whisper</strong> for speech-to-text and <strong>AI models</strong> for translation, with a planned multi-LLM integration layer for flexible provider switching.",
+    prj5_3:
+      "Designed subtitle history storage and multi-game support; delivered as a standalone installer. Achieved <strong>1–2s processing latency</strong> and used by <strong>~10 early users</strong> for feedback and iteration.",
+    prj5_tech:
+      '<strong>Tech:</strong> Python, Whisper, AI Model | <strong>Repo:</strong> <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">github.com/tranphuclan/game-audio-translator</a>',
+
+    education_title: "EDUCATION",
+    edu_major: "B.Sc. in Information Technology",
+    edu_time: "2018 – 2022",
+    edu_school: "Hanoi University of Business and Technology (HUBT)",
+    edu_1:
+      "Focused on core concepts: object-oriented programming, algorithms, and data structures.",
+    edu_2: "Completed individual and team programming projects.",
+    edu_3: "Participated in coding clubs and competitions.",
   },
 };
 

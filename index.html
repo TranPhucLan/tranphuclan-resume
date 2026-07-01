@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CV — Trần Phúc Lân, Back End Developer" />
-    <title>Trần Phúc Lân — Back End Developer</title>
+    <meta name="description" content="CV — Trần Phúc Lân, Backend Developer" />
+    <title>Trần Phúc Lân — Backend Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +33,7 @@
         />
 
         <h1 class="name">Trần Phúc Lân</h1>
-        <p class="role" data-i18n="role">BACK END DEVELOPER</p>
+        <p class="role" data-i18n="role">BACKEND DEVELOPER</p>
 
         <section class="side-section">
           <h2 class="side-title" data-i18n="contact_title">LIÊN HỆ</h2>
@@ -48,7 +48,11 @@
             </li>
             <li>
               <span class="ic" aria-hidden="true">📍</span>
-              <span data-i18n="address">Hoàng Mai, Hà Nội</span>
+              <span data-i18n="address">Hà Nội</span>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true">🎂</span>
+              <span data-i18n="dob">18/03/2000</span>
             </li>
             <li>
               <span class="ic" aria-hidden="true">🐙</span>
@@ -69,50 +73,45 @@
           <h2 class="side-title" data-i18n="skills_title">KỸ NĂNG</h2>
           <dl class="skill-groups">
             <div class="skill-group">
-              <dt data-i18n="skill_cat_languages">Languages</dt>
-              <dd data-i18n="skill_languages">Node.js (TypeScript), Python</dd>
+              <dt data-i18n="skill_cat_languages">Ngôn ngữ</dt>
+              <dd data-i18n="skill_languages">JavaScript/TypeScript, Python</dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_databases">Databases</dt>
-              <dd data-i18n="skill_databases">MongoDB, Redis</dd>
+              <dt data-i18n="skill_cat_backend">Backend</dt>
+              <dd data-i18n="skill_backend">Node.js, Express, GraphQL (Apollo), REST</dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_api">API</dt>
-              <dd data-i18n="skill_api">RESTful, GraphQL, Apollo Server</dd>
+              <dt data-i18n="skill_cat_databases">Cơ sở dữ liệu</dt>
+              <dd data-i18n="skill_databases">MongoDB, PostgreSQL, Redis</dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_infra">Infrastructure</dt>
-              <dd data-i18n="skill_infra">Docker, Linux</dd>
+              <dt data-i18n="skill_cat_queue">Message Queue</dt>
+              <dd data-i18n="skill_queue">Kafka, RabbitMQ</dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_ai">AI/ML</dt>
-              <dd data-i18n="skill_ai">RAG pipeline, LLM integration</dd>
+              <dt data-i18n="skill_cat_devops">DevOps &amp; Cloud</dt>
+              <dd data-i18n="skill_devops">Docker, CI/CD, AWS, GCP, Git</dd>
             </div>
             <div class="skill-group">
-              <dt data-i18n="skill_cat_blockchain">Blockchain</dt>
-              <dd data-i18n="skill_blockchain">TRON, TON ecosystem</dd>
-            </div>
-            <div class="skill-group">
-              <dt data-i18n="skill_cat_tools">Tools</dt>
-              <dd data-i18n="skill_tools">Git</dd>
+              <dt data-i18n="skill_cat_concepts">Chuyên môn</dt>
+              <dd data-i18n="skill_concepts">
+                Thiết kế API REST/GraphQL, RAG / tích hợp LLM, chiến lược caching,
+                giám sát API, Microservices
+              </dd>
             </div>
           </dl>
         </section>
 
         <section class="side-section">
-          <h2 class="side-title" data-i18n="advantage_title">ĐIỂM MẠNH</h2>
-          <ul class="bullets">
-            <li data-i18n="adv_1">
-              5 năm kinh nghiệm backend trong hệ sinh thái blockchain.
+          <h2 class="side-title" data-i18n="lang_title">NGÔN NGỮ</h2>
+          <ul class="lang-list">
+            <li>
+              <span data-i18n="lang_vi">Tiếng Việt</span>
+              <span class="lang-level" data-i18n="lang_vi_level">Bản ngữ</span>
             </li>
-            <li data-i18n="adv_2">
-              Kinh nghiệm tích hợp RAG/LLM cho chatbot hỗ trợ sản phẩm.
-            </li>
-            <li data-i18n="adv_3">
-              Tối ưu hiệu năng với Redis caching — tăng 50% tốc độ hệ thống.
-            </li>
-            <li data-i18n="adv_4">
-              Phát triển sản phẩm DeFi trên TRON và TON ecosystem.
+            <li>
+              <span data-i18n="lang_en">Tiếng Anh</span>
+              <span class="lang-level" data-i18n="lang_en_level">Cơ bản</span>
             </li>
           </ul>
         </section>
@@ -121,41 +120,68 @@
       <!-- ============ MAIN (cột phải) ============ -->
       <div class="content">
         <section class="block">
-          <h2 class="block-title" data-i18n="education_title">HỌC VẤN</h2>
-          <article class="item item--compact">
-            <div class="item-head">
-              <h3 data-i18n="edu_major">Công nghệ Thông tin</h3>
-              <time>2022</time>
-            </div>
-            <p class="item-sub" data-i18n="edu_school">
-              Đại học Kinh doanh và Công nghệ Hà Nội (HUBT)
-            </p>
-          </article>
+          <h2 class="block-title" data-i18n="summary_title">TÓM TẮT</h2>
+          <p class="summary" data-i18n="summary_text">
+            Backend Developer với hơn 4 năm kinh nghiệm thiết kế và xây dựng API mở
+            rộng, hệ thống real-time và ứng dụng xử lý dữ liệu lớn bằng Node.js và
+            Python. Có kinh nghiệm tích hợp blockchain, chatbot AI và tối ưu hiệu
+            năng. Nền tảng vững về thiết kế cơ sở dữ liệu, message queue, giám sát
+            hệ thống và triển khai cloud.
+          </p>
         </section>
 
         <section class="block">
           <h2 class="block-title" data-i18n="experience_title">KINH NGHIỆM LÀM VIỆC</h2>
+
           <article class="item">
             <div class="item-head">
-              <h3 data-i18n="exp_role">BACKEND DEVELOPER</h3>
-              <time>2021 - 2026</time>
+              <h3 data-i18n="exp1_role">Backend Developer — Silotech</h3>
+              <time data-i18n="exp1_time">2022 – Hiện tại</time>
             </div>
-            <p class="item-sub">Silotech</p>
             <ul class="bullets">
-              <li data-i18n="exp_1">
-                Xây dựng RESTful API và GraphQL bằng Node.js, Apollo Server, MongoDB — phục vụ 10K+ request/ngày với thời gian phản hồi dưới 200ms.
+              <li data-i18n="exp1_1">
+                Được thăng tiến từ Fresher lên Junior Backend Developer.
               </li>
-              <li data-i18n="exp_2">
-                Thiết kế và triển khai chatbot RAG tích hợp LLM (Python, vector DB) — tự động giải quyết 70%+ câu hỏi hỗ trợ sản phẩm.
+              <li data-i18n="exp1_2">
+                Xây dựng lớp cache Redis tùy chỉnh bằng Node.js và Redis, giảm tải
+                cơ sở dữ liệu và tăng tốc độ tổng thể hệ thống lên <strong>50%</strong>.
               </li>
-              <li data-i18n="exp_3">
-                Phát triển và ra mắt nhiều hệ thống Telegram bot (Node.js, TON/TRON API) — tăng tương tác người dùng cho 5+ sản phẩm blockchain.
+              <li data-i18n="exp1_3">
+                Phát triển và ra mắt nhiều hệ thống Telegram chatbot cho sản phẩm
+                blockchain, dùng Kafka/RabbitMQ để xử lý message bất đồng bộ.
               </li>
-              <li data-i18n="exp_4">
-                Triển khai lớp cache Redis cho truy vấn MongoDB — giảm 40% tải server và tăng 50% tốc độ tổng thể hệ thống.
+              <li data-i18n="exp1_4">
+                Thiết kế và triển khai schema cơ sở dữ liệu cho sản phẩm blockchain
+                với MongoDB và PostgreSQL, đảm bảo tính toàn vẹn và khả năng mở rộng.
               </li>
-              <li data-i18n="exp_5">
-                Thiết kế schema MongoDB và chiến lược indexing cho sản phẩm DeFi trên hệ sinh thái TRON và TON.
+              <li data-i18n="exp1_5">
+                Xây dựng và duy trì chatbot hỗ trợ tích hợp AI cho sản phẩm blockchain
+                — từ thiết kế kiến trúc, xử lý dữ liệu đến tích hợp LLM.
+              </li>
+              <li data-i18n="exp1_6">
+                Triển khai và vận hành dịch vụ backend với Docker, CI/CD và hạ tầng
+                cloud (AWS/GCP).
+              </li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3 data-i18n="exp2_role">Backend Developer — The Parallel</h3>
+              <time data-i18n="exp2_time">2021 – 2022</time>
+            </div>
+            <ul class="bullets">
+              <li data-i18n="exp2_1">
+                Thăng tiến từ Backend Intern lên Fresher Backend Developer trong năm
+                đầu — nhờ nền tảng kỹ thuật vững và tiến độ giao hàng ổn định.
+              </li>
+              <li data-i18n="exp2_2">
+                Phát triển RESTful và GraphQL API với Node.js, Express, Apollo và
+                MongoDB; làm chủ tính năng được giao từ thiết kế đến triển khai.
+              </li>
+              <li data-i18n="exp2_3">
+                Phối hợp frontend thiết kế API schema, viết module tái sử dụng và
+                tối ưu endpoint để nâng độ tin cậy và hiệu năng hệ thống.
               </li>
             </ul>
           </article>
@@ -166,44 +192,159 @@
 
           <article class="item">
             <div class="item-head">
-              <h3 data-i18n="prj_1_name">Tronsave: Tối ưu phí giao dịch TRON</h3>
+              <h3 data-i18n="prj1_name">Tối ưu phí giao dịch Blockchain (TRON)</h3>
             </div>
             <p class="item-meta">
-              <span data-i18n="prj_1_role">Vai trò: Backend Developer</span>
-              <span class="meta-sep">·</span>
-              <span data-i18n="prj_1_stack">Node.js, TypeScript, TRON API, MongoDB, Redis</span>
+              <span data-i18n="prj1_meta">Silotech · under NDA</span>
             </p>
             <ul class="bullets">
-              <li data-i18n="prj_1_1">
-                Xử lý hàng nghìn giao dịch mua Energy &amp; Bandwidth mỗi ngày, giảm phí giao dịch TRON cho người dùng lên đến 30%.
+              <li data-i18n="prj1_1">
+                Xây dựng dịch vụ trên <strong>blockchain TRON</strong> giúp giảm phí
+                giao dịch on-chain khoảng <strong>66%</strong> thông qua quản lý tài
+                nguyên (Energy &amp; Bandwidth).
               </li>
-              <li data-i18n="prj_1_2">
-                Thiết kế pipeline tối ưu phí on-chain với Redis caching để giảm độ trễ tra cứu tài nguyên mạng TRON.
+              <li data-i18n="prj1_2">
+                Cho phép người dùng mua tài nguyên liền mạch và tạo cơ hội thu nhập
+                thụ động.
               </li>
-              <li data-i18n="prj_1_3">
-                Xây dựng API backend đảm bảo giao dịch liền mạch và cơ chế thu nhập thụ động an toàn cho người dùng.
+              <li data-i18n="prj1_tech">
+                <strong>Tech:</strong> Node.js, Express, TronWeb, MongoDB, Redis.
               </li>
             </ul>
           </article>
 
           <article class="item">
             <div class="item-head">
-              <h3 data-i18n="prj_2_name">TobBot: Giao dịch DeFi nhanh trên Telegram cho TON</h3>
+              <h3 data-i18n="prj2_name">DeFi Trading Bot (Telegram · TON)</h3>
             </div>
             <p class="item-meta">
-              <span data-i18n="prj_2_role">Vai trò: Backend Developer</span>
-              <span class="meta-sep">·</span>
-              <span data-i18n="prj_2_stack">Node.js, TypeScript, TON API, Telegram Bot API, GraphQL</span>
+              <span data-i18n="prj2_meta">Silotech · under NDA</span>
             </p>
             <ul class="bullets">
-              <li data-i18n="prj_2_1">
-                Xây dựng bot Telegram cho phép giao dịch DeFi trên TON với thời gian thực thi dưới 1 giây.
+              <li data-i18n="prj2_1">
+                Phát triển bot Telegram cho phép giao dịch DeFi nhanh chỉ với một
+                chạm trên <strong>blockchain TON</strong>, loại bỏ các bước thao tác
+                thủ công phức tạp cho người dùng.
               </li>
-              <li data-i18n="prj_2_2">
-                Tích hợp GraphQL API và TON blockchain SDK — loại bỏ các bước phức tạp, giảm 80% thao tác so với giao diện web truyền thống.
+              <li data-i18n="prj2_tech">
+                <strong>Tech:</strong> Node.js, Telegram Bot API, TON SDK.
               </li>
-              <li data-i18n="prj_2_3">
-                Xử lý giao dịch tần suất cao qua Telegram với cơ chế queue và retry, đảm bảo độ tin cậy trong môi trường DeFi biến động.
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3 data-i18n="prj3_name">Chatbot AI hỗ trợ cho Blockchain TRON</h3>
+            </div>
+            <p class="item-meta">
+              <span data-i18n="prj3_meta">Silotech · under NDA</span>
+            </p>
+            <ul class="bullets">
+              <li data-i18n="prj3_1">
+                Thiết kế và xây dựng chatbot AI production trên <strong>blockchain
+                TRON</strong> để trả lời câu hỏi về sử dụng sản phẩm, giao dịch/phí
+                (Energy &amp; Bandwidth) và hỗ trợ kỹ thuật.
+              </li>
+              <li data-i18n="prj3_2">
+                Triển khai kiến trúc <strong>RAG</strong> với knowledge base từ tài
+                liệu nội bộ, FAQ và tài liệu sản phẩm; áp dụng prompt engineering để
+                nâng cao chất lượng phản hồi.
+              </li>
+              <li data-i18n="prj3_3">
+                Xử lý và embedding dữ liệu huấn luyện bằng <strong>Ollama</strong>, với
+                lớp <strong>tích hợp multi-LLM</strong> cho phép thay đổi nhà cung cấp
+                LLM mà không cần sửa logic lõi.
+              </li>
+              <li data-i18n="prj3_4">
+                Đạt <strong>60–70% độ chính xác</strong> phản hồi theo yêu cầu nghiệp
+                vụ; đã đưa lên production và duy trì tích cực.
+              </li>
+              <li data-i18n="prj3_tech">
+                <strong>Tech:</strong> Node.js, Ollama, REST API, RAG, multi-LLM integration.
+              </li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3 data-i18n="prj4_name">Hệ thống giám sát &amp; cảnh báo API</h3>
+            </div>
+            <p class="item-meta">
+              <span data-i18n="prj4_meta">The Parallel · under NDA</span>
+            </p>
+            <ul class="bullets">
+              <li data-i18n="prj4_1">
+                Xây dựng hệ thống giám sát <strong>tính khả dụng và hiệu năng</strong>,
+                đo thời gian phản hồi (DNS, TCP, first-byte), uptime và throughput.
+              </li>
+              <li data-i18n="prj4_2">
+                Triển khai <strong>cảnh báo tự động và phân tích nguyên nhân gốc</strong>,
+                gửi cảnh báo real-time qua webhook và nền tảng nhắn tin để giảm MTTR.
+              </li>
+              <li data-i18n="prj4_3">
+                Phát triển <strong>quản lý lưu lượng</strong> để theo dõi lượng traffic
+                và phát hiện đột biến, ngăn hệ thống quá tải.
+              </li>
+              <li data-i18n="prj4_tech">
+                <strong>Tech:</strong> Node.js, Express, Redis, webhooks, messaging integrations.
+              </li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3 data-i18n="prj5_name">game-audio-translator</h3>
+            </div>
+            <p class="item-meta">
+              <span data-i18n="prj5_meta">Dự án cá nhân · 05/2026 – Hiện tại</span>
+            </p>
+            <ul class="bullets">
+              <li data-i18n="prj5_1">
+                Xây dựng ứng dụng desktop thu âm thanh trong game và dịch hội thoại
+                từ <strong>tiếng Anh sang tiếng Việt</strong>, giúp người chơi không
+                rành tiếng Anh theo dõi cốt truyện mà không cần bản vá dịch bên thứ ba.
+              </li>
+              <li data-i18n="prj5_2">
+                Tích hợp <strong>OpenAI Whisper</strong> cho speech-to-text và
+                <strong>model AI</strong> cho dịch thuật, có kế hoạch bổ
+                sung lớp multi-LLM để linh hoạt đổi nhà cung cấp.
+              </li>
+              <li data-i18n="prj5_3">
+                Thiết kế lưu lịch sử phụ đề và hỗ trợ nhiều game; đóng gói thành bộ
+                cài đặt độc lập dễ sử dụng. Đạt độ trễ xử lý <strong>1–2 giây</strong>
+                và được <strong>~10 người dùng đầu tiên</strong> phản hồi để cải tiến.
+              </li>
+              <li data-i18n="prj5_tech">
+                <strong>Tech:</strong> Python, Whisper, AI Model |
+                <strong>Repo:</strong>
+                <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">
+                  github.com/tranphuclan/game-audio-translator
+                </a>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="block">
+          <h2 class="block-title" data-i18n="education_title">HỌC VẤN</h2>
+          <article class="item">
+            <div class="item-head">
+              <h3 data-i18n="edu_major">Cử nhân Công nghệ Thông tin</h3>
+              <time data-i18n="edu_time">2018 – 2022</time>
+            </div>
+            <p class="item-sub" data-i18n="edu_school">
+              Đại học Kinh doanh và Công nghệ Hà Nội (HUBT)
+            </p>
+            <ul class="bullets">
+              <li data-i18n="edu_1">
+                Tập trung vào các khái niệm cốt lõi: lập trình hướng đối tượng, giải
+                thuật và cấu trúc dữ liệu.
+              </li>
+              <li data-i18n="edu_2">
+                Hoàn thành các dự án lập trình cá nhân và theo nhóm.
+              </li>
+              <li data-i18n="edu_3">
+                Tham gia các câu lạc bộ lập trình và cuộc thi.
               </li>
             </ul>
           </article>
