@@ -17,11 +17,14 @@ const translations = {
     skill_databases: "MongoDB, PostgreSQL, Redis",
     skill_cat_queue: "Message Queue",
     skill_queue: "Kafka, RabbitMQ",
+    skill_cat_ai_ml: "AI / ML Integration",
+    skill_ai_ml:
+      "RAG, LLM integration, prompt engineering, embeddings (Ollama), speech-to-text (Whisper), multi-LLM architecture",
     skill_cat_devops: "DevOps & Cloud",
     skill_devops: "Docker, CI/CD, AWS, GCP, Git",
     skill_cat_concepts: "Concepts",
     skill_concepts:
-      "REST/GraphQL API design, RAG / LLM integration, caching strategies, API monitoring, Microservices",
+      "RESTful & GraphQL API design, caching strategies, API monitoring, Microservices, network protocols (REST, SOAP, TCP/IP, HTTP/HTTPS)",
 
     lang_title: "LANGUAGES",
     lang_vi: "Vietnamese",
@@ -37,8 +40,6 @@ const translations = {
     exp1_role: "Backend Developer — Silotech",
     exp1_time: "2022 – Present",
     exp1_1: "Promoted from Fresher to Junior Backend Developer.",
-    exp1_2:
-      "Built a custom Redis caching layer using Node.js and Redis, reducing database load and improving overall system speed by <strong>50%</strong>.",
     exp1_3:
       "Developed and launched multiple production Telegram chatbot systems for blockchain products, using Kafka/RabbitMQ for asynchronous message processing.",
     exp1_4:
@@ -59,19 +60,33 @@ const translations = {
 
     projects_title: "PROJECTS",
 
-    prj1_name: "Blockchain Transaction Fee Optimization (TRON)",
+    prj1_name: "Blockchain Transaction Fee Optimization Service (TRON)",
     prj1_meta: "Silotech · under NDA",
     prj1_1:
-      "Built a service on the <strong>TRON blockchain</strong> that reduces on-chain transaction fees by <strong>~66%</strong> through resource (Energy & Bandwidth) management.",
+      "Designed and built backend services on the <strong>TRON blockchain</strong> to reduce on-chain transaction fees by <strong>~66%</strong> through automated <strong>Energy & Bandwidth</strong> resource management.",
     prj1_2:
-      "Enabled seamless resource purchasing and passive-income opportunities for users.",
+      "Developed REST APIs for resource purchasing, allocation, and usage tracking, enabling users to buy and consume TRON resources without manual on-chain operations.",
+    prj1_3:
+      "Integrated <strong>TronWeb</strong> to interact with smart contracts, submit transactions, and monitor on-chain status for purchase and consumption flows.",
+    prj1_4:
+      "Designed <strong>MongoDB</strong> schemas for orders, resource balances, and transaction history; used <strong>Redis</strong> caching to reduce database load and improve API response time.",
+    prj1_5:
+      "Implemented a passive-income module that lets users rent out unused Energy/Bandwidth resources securely through the platform.",
     prj1_tech:
       "<strong>Tech:</strong> Node.js, Express, TronWeb, MongoDB, Redis.",
 
     prj2_name: "DeFi Trading Bot (Telegram · TON)",
     prj2_meta: "Silotech · under NDA",
     prj2_1:
-      "Developed a Telegram bot enabling fast, one-click DeFi trading on the <strong>TON blockchain</strong>, removing complex manual steps for users.",
+      "Built the backend for a <strong>Telegram DeFi trading bot</strong> on the TON blockchain, allowing users to execute trades directly in chat instead of using complex external tools.",
+    prj2_2:
+      "Designed bot command flows and trade orchestration logic to convert multi-step DeFi operations into <strong>one-click trading</strong> actions.",
+    prj2_3:
+      "Integrated <strong>Telegram Bot API</strong> for user interaction and <strong>TON SDK</strong> for on-chain swap/transaction execution and status tracking.",
+    prj2_4:
+      "Handled wallet connection, order validation, and transaction result feedback within the bot workflow.",
+    prj2_5:
+      "Supported multiple trading scenarios across TON-based DeFi products while keeping the user experience simple and fast.",
     prj2_tech: "<strong>Tech:</strong> Node.js, Telegram Bot API, TON SDK.",
 
     prj3_name: "AI Support Chatbot for TRON Blockchain",

@@ -89,14 +89,20 @@
               <dd data-i18n="skill_queue">Kafka, RabbitMQ</dd>
             </div>
             <div class="skill-group">
+              <dt data-i18n="skill_cat_ai_ml">AI / ML Integration</dt>
+              <dd data-i18n="skill_ai_ml">
+                RAG, tích hợp LLM, prompt engineering, embeddings (Ollama), speech-to-text (Whisper), kiến trúc multi-LLM
+              </dd>
+            </div>
+            <div class="skill-group">
               <dt data-i18n="skill_cat_devops">DevOps &amp; Cloud</dt>
               <dd data-i18n="skill_devops">Docker, CI/CD, AWS, GCP, Git</dd>
             </div>
             <div class="skill-group">
               <dt data-i18n="skill_cat_concepts">Chuyên môn</dt>
               <dd data-i18n="skill_concepts">
-                Thiết kế API REST/GraphQL, RAG / tích hợp LLM, chiến lược caching,
-                giám sát API, Microservices
+                Thiết kế API RESTful &amp; GraphQL, chiến lược caching, giám sát API,
+                Microservices, giao thức mạng (REST, SOAP, TCP/IP, HTTP/HTTPS)
               </dd>
             </div>
           </dl>
@@ -141,10 +147,6 @@
             <ul class="bullets">
               <li data-i18n="exp1_1">
                 Được thăng tiến từ Fresher lên Junior Backend Developer.
-              </li>
-              <li data-i18n="exp1_2">
-                Xây dựng lớp cache Redis tùy chỉnh bằng Node.js và Redis, giảm tải
-                cơ sở dữ liệu và tăng tốc độ tổng thể hệ thống lên <strong>50%</strong>.
               </li>
               <li data-i18n="exp1_3">
                 Phát triển và ra mắt nhiều hệ thống Telegram chatbot cho sản phẩm
@@ -192,20 +194,35 @@
 
           <article class="item">
             <div class="item-head">
-              <h3 data-i18n="prj1_name">Tối ưu phí giao dịch Blockchain (TRON)</h3>
+              <h3 data-i18n="prj1_name">Dịch vụ tối ưu phí giao dịch Blockchain (TRON)</h3>
             </div>
             <p class="item-meta">
               <span data-i18n="prj1_meta">Silotech · under NDA</span>
             </p>
             <ul class="bullets">
               <li data-i18n="prj1_1">
-                Xây dựng dịch vụ trên <strong>blockchain TRON</strong> giúp giảm phí
-                giao dịch on-chain khoảng <strong>66%</strong> thông qua quản lý tài
-                nguyên (Energy &amp; Bandwidth).
+                Thiết kế và phát triển dịch vụ backend trên <strong>blockchain TRON</strong>
+                nhằm giảm phí giao dịch on-chain khoảng <strong>66%</strong> thông qua
+                cơ chế tự động quản lý tài nguyên <strong>Energy &amp; Bandwidth</strong>.
               </li>
               <li data-i18n="prj1_2">
-                Cho phép người dùng mua tài nguyên liền mạch và tạo cơ hội thu nhập
-                thụ động.
+                Phát triển REST API cho quy trình mua tài nguyên, phân bổ và theo dõi
+                mức sử dụng, giúp người dùng mua và tiêu thụ tài nguyên TRON mà không
+                cần thao tác on-chain thủ công.
+              </li>
+              <li data-i18n="prj1_3">
+                Tích hợp <strong>TronWeb</strong> để tương tác smart contract, gửi giao
+                dịch và theo dõi trạng thái on-chain cho các luồng mua và tiêu thụ tài
+                nguyên.
+              </li>
+              <li data-i18n="prj1_4">
+                Thiết kế schema <strong>MongoDB</strong> cho đơn hàng, số dư tài nguyên
+                và lịch sử giao dịch; dùng cache <strong>Redis</strong> để giảm tải cơ sở
+                dữ liệu và cải thiện thời gian phản hồi API.
+              </li>
+              <li data-i18n="prj1_5">
+                Triển khai module thu nhập thụ động cho phép người dùng cho thuê phần
+                tài nguyên Energy/Bandwidth chưa sử dụng một cách an toàn trên nền tảng.
               </li>
               <li data-i18n="prj1_tech">
                 <strong>Tech:</strong> Node.js, Express, TronWeb, MongoDB, Redis.
@@ -222,9 +239,26 @@
             </p>
             <ul class="bullets">
               <li data-i18n="prj2_1">
-                Phát triển bot Telegram cho phép giao dịch DeFi nhanh chỉ với một
-                chạm trên <strong>blockchain TON</strong>, loại bỏ các bước thao tác
-                thủ công phức tạp cho người dùng.
+                Xây dựng backend cho <strong>Telegram DeFi trading bot</strong> trên
+                blockchain TON, cho phép người dùng thực hiện giao dịch trực tiếp
+                trong chat thay vì thao tác thủ công qua các công cụ bên ngoài phức tạp.
+              </li>
+              <li data-i18n="prj2_2">
+                Thiết kế luồng command của bot và logic điều phối giao dịch để chuyển
+                các thao tác DeFi nhiều bước thành trải nghiệm giao dịch <strong>một chạm</strong>.
+              </li>
+              <li data-i18n="prj2_3">
+                Tích hợp <strong>Telegram Bot API</strong> cho tương tác người dùng và
+                <strong>TON SDK</strong> cho thực thi swap/giao dịch on-chain cùng theo
+                dõi trạng thái giao dịch.
+              </li>
+              <li data-i18n="prj2_4">
+                Xử lý kết nối ví, xác thực lệnh và phản hồi kết quả giao dịch trong
+                toàn bộ workflow của bot.
+              </li>
+              <li data-i18n="prj2_5">
+                Hỗ trợ nhiều kịch bản giao dịch trên các sản phẩm DeFi hệ TON nhưng
+                vẫn giữ trải nghiệm người dùng đơn giản và nhanh.
               </li>
               <li data-i18n="prj2_tech">
                 <strong>Tech:</strong> Node.js, Telegram Bot API, TON SDK.
