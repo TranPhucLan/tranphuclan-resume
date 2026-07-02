@@ -136,8 +136,12 @@ const translations = {
 };
 
 const langToggle = document.getElementById("lang-toggle");
-const langLabel = document.getElementById("lang-label");
 const langFlag = langToggle.querySelector(".flag");
+const pdfDownload = document.getElementById("pdf-download");
+const dock = document.getElementById("dock");
+const dockHandle = document.getElementById("dock-handle");
+const dockPanel = dock.querySelector(".dock-panel");
+const resumeEl = document.querySelector(".resume");
 
 // Lưu lại nội dung tiếng Việt gốc để có thể chuyển ngược lại.
 const viDefaults = {};
@@ -168,16 +172,104 @@ function applyLanguage(lang) {
   });
 
   document.documentElement.lang = isEn ? "en" : "vi";
-  langLabel.textContent = isEn ? "English" : "Tiếng Việt";
   langFlag.textContent = isEn ? "🇬🇧" : "🇻🇳";
   langToggle.setAttribute("aria-pressed", String(isEn));
+  const langTitle = isEn ? "Switch to Vietnamese" : "Chuyển sang tiếng Anh";
+  langToggle.setAttribute("aria-label", langTitle);
+  langToggle.setAttribute("title", langTitle);
+
+  const pdfTitle = isEn ? "Download CV (PDF)" : "Tải CV (PDF)";
+  pdfDownload.setAttribute("aria-label", pdfTitle);
+  pdfDownload.setAttribute("title", pdfTitle);
   localStorage.setItem("resume-lang", lang);
   syncLangToUrl(lang);
 }
 
+// Dock nép vào mép phải.
+// - Khi còn khoảng trống bên cạnh (không đè lên CV): luôn mở, ghim cố định.
+// - Khi dock đè lên nội dung CV: thu vào thành tay cầm, bấm mới hiện.
+function setDockOpen(open) {
+  dock.classList.toggle("open", open);
+  dockHandle.setAttribute("aria-expanded", String(open));
+  dockHandle.setAttribute("aria-label", open ? "Thu gọn công cụ" : "Mở công cụ");
+}
+
+// Bảng nút (khi mở) có đè lên khối .resume không?
+function dockOverlapsResume() {
+  if (!resumeEl) return false;
+  const r = resumeEl.getBoundingClientRect();
+  const h = dockHandle.getBoundingClientRect();
+  const gap = 6; // khoảng cách panel ↔ tay cầm (~0.4rem)
+  const panelW = dockPanel.offsetWidth;
+  const panelH = dockPanel.offsetHeight;
+  const pRight = h.left - gap;
+  const pLeft = pRight - panelW;
+  const cy = h.top + h.height / 2;
+  const pTop = cy - panelH / 2;
+  const pBottom = cy + panelH / 2;
+  return pLeft < r.right && pRight > r.left && pTop < r.bottom && pBottom > r.top;
+}
+
+let dockPinnedOpen = false;
+let prevOverlap = null;
+
+function updateDockState() {
+  const overlap = dockOverlapsResume();
+  if (overlap === prevOverlap) return;
+  prevOverlap = overlap;
+  dockPinnedOpen = !overlap;
+  setDockOpen(!overlap);
+}
+
+let dockRaf = null;
+function scheduleDockUpdate() {
+  if (dockRaf) return;
+  dockRaf = requestAnimationFrame(() => {
+    dockRaf = null;
+    updateDockState();
+  });
+}
+
+dockHandle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  setDockOpen(!dock.classList.contains("open"));
+});
+
+document.addEventListener("click", (e) => {
+  if (!dockPinnedOpen && dock.classList.contains("open") && !dock.contains(e.target)) {
+    setDockOpen(false);
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !dockPinnedOpen) setDockOpen(false);
+});
+
+window.addEventListener("scroll", scheduleDockUpdate, { passive: true });
+window.addEventListener("resize", scheduleDockUpdate);
+window.addEventListener("load", updateDockState);
+updateDockState();
+
 langToggle.addEventListener("click", () => {
   const current = localStorage.getItem("resume-lang") === "en" ? "en" : "vi";
   applyLanguage(current === "en" ? "vi" : "en");
+});
+
+// Tạo PDF trực tiếp từ trang: dùng hộp thoại in của trình duyệt
+// (đã có sẵn CSS @media print) nên bản PDF luôn khớp ngôn ngữ đang xem.
+pdfDownload.addEventListener("click", () => {
+  const lang = localStorage.getItem("resume-lang") === "en" ? "en" : "vi";
+  // Tên file gợi ý khi chọn "Save as PDF" chính là document.title.
+  const prevTitle = document.title;
+  document.title = `Tran-Phuc-Lan-CV-${lang}`;
+  window.addEventListener(
+    "afterprint",
+    () => {
+      document.title = prevTitle;
+    },
+    { once: true }
+  );
+  window.print();
 });
 
 applyLanguage(getInitialLanguage());

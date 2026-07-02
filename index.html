@@ -14,10 +14,63 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="toolbar">
-      <button id="lang-toggle" class="lang-btn" type="button" aria-label="Switch language">
-        <span class="flag">🇻🇳</span>
-        <span id="lang-label">Tiếng Việt</span>
+    <div class="toolbar" id="dock">
+      <div class="dock-panel">
+        <button
+          id="lang-toggle"
+          class="dock-btn dock-btn--ghost"
+          type="button"
+          aria-label="Switch language"
+        >
+          <span class="flag">🇻🇳</span>
+        </button>
+        <button
+          id="pdf-download"
+          class="dock-btn dock-btn--accent"
+          type="button"
+          aria-label="Tải CV (PDF)"
+          title="Tải CV (PDF)"
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M12 3v12" />
+            <path d="m7 10 5 5 5-5" />
+            <path d="M5 21h14" />
+          </svg>
+        </button>
+      </div>
+      <button
+        id="dock-handle"
+        class="dock-handle"
+        type="button"
+        aria-label="Mở công cụ"
+        aria-expanded="false"
+        aria-controls="dock"
+      >
+        <svg
+          class="dock-handle-icon"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m15 6-6 6 6 6" />
+        </svg>
       </button>
     </div>
 

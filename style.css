@@ -39,40 +39,116 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Toolbar / language toggle ---------- */
+/* ---------- Floating action dock ---------- */
 .toolbar {
-  max-width: var(--max-width);
-  margin: 1.5rem auto 0;
-  padding: 0 1rem;
+  position: fixed;
+  right: 0;
+  bottom: 1.5rem;
+  z-index: 1000;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.lang-btn {
+/* Tay cầm nép vào mép phải, luôn hiển thị nhưng nhỏ gọn */
+.dock-handle {
+  order: 2;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.9rem;
-  font: inherit;
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--text);
+  justify-content: center;
+  width: 1.75rem;
+  height: 3.25rem;
+  padding: 0;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 12px 0 0 12px;
+  cursor: pointer;
+  box-shadow: -3px 3px 12px rgb(0 0 0 / 16%);
+  transition: background 0.15s ease, width 0.15s ease;
+}
+
+.dock-handle:hover {
+  background: #0ea371;
+  width: 2rem;
+}
+
+.dock-handle-icon {
+  transition: transform 0.25s ease;
+}
+
+.toolbar.open .dock-handle-icon {
+  transform: rotate(180deg);
+}
+
+/* Bảng chứa 2 nút: mặc định ẩn (trượt sang phải), mở ra khi bấm tay cầm */
+.dock-panel {
+  order: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 999px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 14%);
+  transform: translateX(calc(100% + 1rem));
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.toolbar.open .dock-panel {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dock-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  font: inherit;
+  border: 1px solid transparent;
+  border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 6%);
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
-.lang-btn:hover {
+.dock-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgb(0 0 0 / 10%);
 }
 
-.lang-btn .flag {
-  font-size: 1.05rem;
+.dock-btn--accent {
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 2px 6px rgb(16 185 129 / 35%);
+}
+
+.dock-btn--accent:hover {
+  background: #0ea371;
+  box-shadow: 0 4px 12px rgb(16 185 129 / 40%);
+}
+
+.dock-btn--ghost {
+  background: transparent;
+  color: var(--text);
+}
+
+.dock-btn--ghost:hover {
+  background: var(--page-bg);
+}
+
+.dock-btn .flag {
+  font-size: 1.3rem;
   line-height: 1;
+}
+
+.dock-btn .icon {
+  flex: none;
 }
 
 /* ---------- Resume layout ---------- */
@@ -80,7 +156,7 @@ a:hover {
   display: grid;
   grid-template-columns: 290px 1fr;
   max-width: var(--max-width);
-  margin: 1rem auto 2.5rem;
+  margin: 1.5rem auto 6rem;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -390,11 +466,16 @@ a:hover {
 @media (max-width: 720px) {
   .resume {
     grid-template-columns: 1fr;
-    margin: 1rem;
+    margin: 1rem 1rem 5.5rem;
   }
 
   .content {
     padding: 1.75rem 1.35rem;
+  }
+
+  .toolbar {
+    right: 0.9rem;
+    bottom: 0.9rem;
   }
 }
 
