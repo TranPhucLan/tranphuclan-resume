@@ -171,8 +171,8 @@ a:hover {
 }
 
 .avatar {
-  width: 96px;
-  height: 96px;
+  width: 128px;
+  height: 128px;
   margin: 0 auto 1.1rem;
   border-radius: 50%;
   display: block;
@@ -496,6 +496,10 @@ a:hover {
 
 /* ---------- Print ---------- */
 @media print {
+  html {
+    font-size: 13px;
+  }
+
   body {
     background: #fff;
   }
@@ -505,15 +509,62 @@ a:hover {
   }
 
   .resume {
+    /*
+     * Table layout giữ sidebar và content cùng hàng — tránh lệch cột
+     * khi phân trang (lỗi phổ biến của CSS Grid khi in).
+     */
+    display: table;
+    width: 100%;
     margin: 0;
     max-width: none;
     border-radius: 0;
     box-shadow: none;
+    table-layout: fixed;
   }
 
   .sidebar {
+    display: table-cell;
+    width: 260px;
+    vertical-align: top;
+    padding: 1.75rem 1.25rem;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+
+  .avatar {
+    width: 108px;
+    height: 108px;
+  }
+
+  .content {
+    display: table-cell;
+    vertical-align: top;
+    padding: 1.75rem 1.5rem;
+  }
+
+  /* letter-spacing lớn khiến Chrome/PDF tách từng ký tự */
+  .role,
+  .side-title,
+  .block-title,
+  .skill-group dt {
+    letter-spacing: 0;
+  }
+
+  .contact li,
+  .side-section,
+  .block,
+  .item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Emoji dễ bị tách khỏi text khi in */
+  .contact .ic {
+    display: none;
+  }
+
+  .item::after {
+    display: none;
   }
 
   @page {
