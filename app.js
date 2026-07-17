@@ -143,7 +143,7 @@ const translations = {
       '<strong>Tech:</strong> Python, Whisper, Google Translate API | <strong>Repo:</strong> <a href="https://github.com/tranphuclan/game-audio-translator" target="_blank" rel="noopener">github.com/tranphuclan/game-audio-translator</a>',
 
     education_title: "EDUCATION",
-    edu_major: "B.Sc. in Information Technology (Computer Science)",
+    edu_major: "B.Sc. in Information Technology",
     edu_time: "2018 – 2022",
     edu_school: "Hanoi University of Business and Technology (HUBT)",
     edu_1:
